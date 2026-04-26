@@ -1,4 +1,4 @@
-# trabalho de extensão -Atividade acadêmica EAD Eng.Software de Software Estacio
+# trabalho de extensão - Atividade acadêmica EAD Eng.Software de Software Estacio
 APLICAÇÃO DE BUSINESS INTELLIGENCE NA ANÁLISE DE PERDAS E RISCOS NO VAREJO UTILIZANDO POWER BI
 <div align="center">
 
