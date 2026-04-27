@@ -84,7 +84,7 @@ end note
 
 - **Quizzes:** 85% média
 - **NPS:** 8.7/10
-- **Relatório:** [PDF Completo](docs/Trabalho.pdf)
+- **Relatório:** [PDF Completo](Trabalho.pdf)
 
 ## 🤝 Contribua
 
