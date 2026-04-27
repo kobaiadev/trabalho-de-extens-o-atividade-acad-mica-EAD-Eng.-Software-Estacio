@@ -84,7 +84,7 @@ end note
 
 - **Quizzes:** 85% média
 - **NPS:** 8.7/10
-- **Relatório:** [PDF Completo](docs/Trabalho de Extensão - Atividade de extensão obrigatória, que deve ser completada no semestre.pdf)
+- **Relatório:** [PDF Completo](docs/Trabalho.pdf)
 
 ## 🤝 Contribua
 
