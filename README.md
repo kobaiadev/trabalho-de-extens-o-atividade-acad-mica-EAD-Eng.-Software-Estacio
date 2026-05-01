@@ -48,3 +48,6 @@ Este projeto consiste no desenvolvimento de uma solução de **Business Intellig
 **Clone:**
 ```bash
 git clone [https://github.com/danieldslima/trabalho-de-extensao-EAD-Eng.-Software-Estacio.git](https://github.com/danieldslima/trabalho-de-extensao-EAD-Eng.-Software-Estacio.git)
+
+
+## linkedin : https://www.linkedin.com/in/daniel-lima-2ab2982b8/
