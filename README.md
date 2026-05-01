@@ -34,24 +34,17 @@ Este projeto consiste no desenvolvimento de uma solução de **Business Intellig
 - **Dashboards Interativos:** Visualização temporal (2024-2026) e comparação regional.
 - **Auditoria SQL:** Consultas para identificação de outliers e validação de riscos.
 
-## 🖼️ Demo: Pipeline de Dados (ETL)
+## 📚 Conteúdo do Repositório
 
-```plantuml
-@startuml pipeline-dados-varejo
-skinparam monochrome true
-title Fluxo de Dados: Análise de Perdas
+| Componente | Arquivo | Finalidade |
+| :--- | :--- | :--- |
+| **Automação** | `scripts/automacao_perdas.py` | Script Python para limpeza do arquivo XLSX. |
+| **Banco de Dados** | `sql/consulta_perdas.sql` | Estrutura de tabelas e auditoria de riscos. |
+| **Data** | `data/App Analise de Perdas.xlsx` | Base de dados bruta recebida para análise. |
+| **Relatório** | `docs/Trabalho.pdf` | Documentação completa do projeto de extensão. |
 
-database "Excel Bruto" as Excel
-node "Script Python (ETL)" as Python
-database "Base Limpa" as Base
-node "Power BI Dashboard" as PBI
+## 🚀 Como Usar
 
-Excel --> Python : App Analise de Perdas.xlsx
-Python --> Base : Remove ID / Filtra Colunas
-Base --> PBI : Modelagem Star Schema
-
-note right of Python
-  Colunas: Loja, Ano, 
-  Mês, Perdas(Brt)
-end note
-@enduml
+**Clone:**
+```bash
+git clone [https://github.com/danieldslima/trabalho-de-extensao-EAD-Eng.-Software-Estacio.git](https://github.com/danieldslima/trabalho-de-extensao-EAD-Eng.-Software-Estacio.git)
