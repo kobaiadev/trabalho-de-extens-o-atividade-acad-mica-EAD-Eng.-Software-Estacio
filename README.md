@@ -1,96 +1,57 @@
-# Trabalho de Extensão - Atividade Acadêmica EAD Eng.Software de Software Estacio
+# Trabalho de Extensão - Atividade Acadêmica EAD Eng. Software Estácio
 APLICAÇÃO DE BUSINESS INTELLIGENCE NA ANÁLISE DE PERDAS E RISCOS NO VAREJO UTILIZANDO POWER BI
+
 <div align="center">
 
-# 🛠️ LPS Workshops Volta Redonda 2026
+# 📊 Dashboard de Prevenção de Perdas VR 2026
 
-[![Status](https://img.shields.io/badge/Conclu%C3%ADdo-100%25-brightgreen)](https://github.com/danieldslima/lps-extensao-vr-2026)
-[![Est%C3%A1cio](https://img.shields.io/badge/Est%C3%A1cio%20de%20S%C3%A1-2026.1%20EAD-blue)](https://estacio.br)
-[![Participantes](https://img.shields.io/badge/15%20devs%20capacitados-success)](https://github.com/danieldslima/lps-extensao-vr-2026/issues)
-[![PlantUML](https://img.shields.io/badge/Tech-PlantUML%20%7C%20Zoom%20%7C%20GitHub-orange)](https://plantuml.com)
+[![Status](https://img.shields.io/badge/Conclu%C3%ADdo-100%25-brightgreen)](https://github.com/danieldslima/trabalho-de-extensao-EAD-Eng.-Software-Estacio)
+[![Estácio](https://img.shields.io/badge/Est%C3%A1cio%20de%20S%C3%A1-2026.1%20EAD-blue)](https://estacio.br)
+[![Tech](https://img.shields.io/badge/Tech-Power%20BI%20%7C%20Python%20%7C%20SQL-orange)](#)
+[![PlantUML](https://img.shields.io/badge/Modelagem-PlantUML-blue)](https://plantuml.com)
 
-**Trabalho de Extensão Universitária: Capacitação em Linhas de Produtos de Software (LPS) para desenvolvedores locais de Volta Redonda, RJ.**
+**Trabalho de Extensão Universitária: Implementação de Business Intelligence e automação de ETL para análise de riscos operacionais no varejo de Volta Redonda, RJ.**
 
-**Daniel da Silva Lima | Matrícula: 202401159018 | Linhas de Produtos de Software (597)**
+**Daniel da Silva Lima | Matrícula: 202401159018 | Engenharia de Software**
 
 </div>
 
 ## 📋 Sobre o Projeto
 
-Desenvolvi **3 workshops online** (EAD Estácio de Sá) para **15 profissionais de TI locais**, ensinando **gerenciamento de variabilidade**, **feature models** e **engenharia de domínio/aplicação**. 
+Este projeto consiste no desenvolvimento de uma solução de **Business Intelligence** para otimizar a análise de perdas em uma unidade varejista (**CNPJ: 15.347.973/0001-79**). A solução substitui processos manuais de limpeza de dados por um pipeline automatizado em Python, alimentando dashboards interativos.
 
 **Impacto real:**
-- 12/15 certificados (80% aprovação quizzes)
-- 3 protótipos feature models criados
-- 5 oportunidades LPS identificadas em PMEs (ex.: apps de estoque reutilizáveis)
+- **Automação de ETL:** Substituição da limpeza manual do arquivo `App Analise de Perdas.xlsx`.
+- **Padronização:** Filtragem de colunas irrelevantes (ID) e foco em KPIs estratégicos: Loja, Ano, Mês e Perdas(Brt).
+- **Eficiência:** Redução no tempo de resposta e identificação imediata de unidades críticas.
 
-**Case prático:** Adaptação para lanchonetes locais (controle vendas/estoque com variabilidade por cliente).
+**Case prático:** Aplicação de Engenharia de Software para transformar dados brutos de planilhas em indicadores de performance (Excelente/Estável).
 
-## ✨ Funcionalidades Aprendidas
+## ✨ Funcionalidades Técnicas
 
-- Modelagem de **feature models** com PlantUML
-- Identificação de **domínios comuns** em projetos locais
-- Reuso de **famílias de software** (reduz tempo 40%)
-- Práticas **ágil para LPS**
+- **Limpeza Automatizada:** Script Python (Pandas) para higienização seletiva de dados.
+- **Modelagem Star Schema:** Estruturação de dados para alta performance no Power BI.
+- **Dashboards Interativos:** Visualização temporal (2024-2026) e comparação regional.
+- **Auditoria SQL:** Consultas para identificação de outliers e validação de riscos.
 
-## 🖼️ Demo: Feature Model Exemplo (Gestão Estoque)
+## 🖼️ Demo: Pipeline de Dados (ETL)
 
 ```plantuml
-@startuml feature-model-lanchonete
+@startuml pipeline-dados-varejo
 skinparam monochrome true
-title Feature Model: Sistema Gestão Lanchonete
+title Fluxo de Dados: Análise de Perdas
 
-[*] --> LPS_Gestao
-LPS_Gestao <|-- Estoque
-LPS_Gestao <|-- Vendas
-LPS_Gestao <|-- Relatorios
+database "Excel Bruto" as Excel
+node "Script Python (ETL)" as Python
+database "Base Limpa" as Base
+node "Power BI Dashboard" as PBI
 
-Estoque <|-- ControleManual : obrigatório
-Estoque <|-- ControleDigital : opcional
-Estoque <|-- AlertasBaixoEstoque : opcional
+Excel --> Python : App Analise de Perdas.xlsx
+Python --> Base : Remove ID / Filtra Colunas
+Base --> PBI : Modelagem Star Schema
 
-Vendas <|-- PDV : obrigatório
-Vendas <|-- Delivery : opcional
-
-Relatorios <|-- Diario : obrigatório
-Relatorios <|-- Mensal : opcional
-
-note right of ControleDigital
-  Case: Lanchonete Sabor da Roça
+note right of Python
+  Colunas: Loja, Ano, 
+  Mês, Perdas(Brt)
 end note
 @enduml
-```
-
-*(Renderize: [PlantUML Online](http://www.plantuml.com/plantuml/uml/))*
-
-## 📚 Conteúdo dos Workshops
-
-| Workshop | Data | Duração | Material |
-|----------|------|---------|----------|
-| 1. Intro LPS & Domínio | 08/03 | 2h | [Slides PDF](docs/slides-w1-intro.pdf) |
-| 2. Feature Models | 22/03 | 3h | [PlantUML Proto](examples/feature-model.iuml) |
-| 3. Eng. Aplicação | 12/04 | 3h | [Vídeo Demo](https://youtube.com/unlisted) |
-
-## 🚀 Como Usar
-
-1. **Clone:**
-   ```bash
-   git clone https://github.com/danieldslima/lps-extensao-vr-2026.git
-   ```
-
-2. **Materiais:** `docs/slides-*.pdf` + `/examples/`
-
-## 📈 Resultados
-
-- **Quizzes:** 85% média
-- **NPS:** 8.7/10
-- **Relatório:** [PDF Completo](Trabalho.pdf)
-
-## 🤝 Contribua
-
-Fork → Issue → PR para `develop`.
-
-## 📄 Licença
-[MIT](LICENSE)
-
-**Daniel da Silva Lima** | [LinkedIn](https://linkedin.com/in/danieldslima) | Volta Redonda, RJ
